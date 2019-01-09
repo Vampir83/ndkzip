@@ -26,9 +26,9 @@ if [ ! "$APP_PLATFORM" ]; then
 fi;
 
 # Set up Android NDK
-echo "Fetching Android NDK 15c"
-[ -f "android-ndk-$NDK-linux-x86_64.zip" ] || wget https://dl.google.com/android/repository/android-ndk-15c-$plat-x86_64.zip
-[ -d "android-ndk-15c" ] || unzip -o android-ndk-15c-$plat-x86_64.zip
+echo "Fetching Android NDK r15c"
+[ -f "android-ndk-r15c-linux-x86_64.zip" ] || wget https://dl.google.com/android/repository/android-ndk-r15c-$plat-x86_64.zip
+[ -d "android-ndk-r15c" ] || unzip -o android-ndk-r15c-$plat-x86_64.zip
 
 # Build
 $NDK_ROOT/ndk-build$ext NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk NDK_TOOLCHAIN_VERSION=$NDK_TOOLCHAIN_VERSION APP_ABI=$APP_ABI APP_PLATFORM=$APP_PLATFORM APP_STL=gnustl_static;
