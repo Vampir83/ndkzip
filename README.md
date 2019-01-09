@@ -7,7 +7,7 @@ code description :  http://www.cloudchou.com/android/post-717.html <br/>
 Added and modified build script by osm0sis for easy compiling
 
 ## Usage
-git clone
-cd jni
-chmod +x build.sh
+git clone <br/>
+cd jni <br/>
+chmod +x build.sh <br/>
 ./build.sh
