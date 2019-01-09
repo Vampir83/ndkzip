@@ -19,7 +19,7 @@ if [ ! "$NDK_TOOLCHAIN_VERSION" ]; then
   NDK_TOOLCHAIN_VERSION=clang;
 fi;
 if [ ! "$APP_ABI" ]; then
-  APP_ABI=arm;
+  APP_ABI=armeabi;
 fi;
 if [ ! "$APP_PLATFORM" ]; then
   APP_PLATFORM=android-21;
