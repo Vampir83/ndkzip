@@ -26,7 +26,7 @@ if [ ! "$APP_PLATFORM" ]; then
 fi;
 
 # Set up Android NDK
-echogreen "Fetching Android NDK 15c"
+echo "Fetching Android NDK 15c"
 [ -f "android-ndk-$NDK-linux-x86_64.zip" ] || wget https://dl.google.com/android/repository/android-ndk-15c-$plat-x86_64.zip
 [ -d "android-ndk-15c" ] || unzip -o android-ndk-15c-$plat-x86_64.zip
 
