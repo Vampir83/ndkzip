@@ -29,9 +29,6 @@ fi;
 echogreen "Fetching Android NDK 15c"
 [ -f "android-ndk-$NDK-linux-x86_64.zip" ] || wget https://dl.google.com/android/repository/android-ndk-15c-$plat-x86_64.zip
 [ -d "android-ndk-15c" ] || unzip -o android-ndk-15c-$plat-x86_64.zip
-echogreen "Setting Up Android NDK 15c"
-python android-ndk-15c/build/tools/make_standalone_toolchain.py --arch $(echo `echo $a | sed 's/android-//'`) --api $APP_ABI --install-dir Toolchains --force
-[ $? -ne 0 ] && { echored "Error in NDK Setup!"; exit 1; }
 
 # Build
 $NDK_ROOT/ndk-build$ext NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk NDK_TOOLCHAIN_VERSION=$NDK_TOOLCHAIN_VERSION APP_ABI=$APP_ABI APP_PLATFORM=$APP_PLATFORM APP_STL=gnustl_static;
