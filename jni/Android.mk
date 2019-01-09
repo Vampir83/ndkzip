@@ -1,7 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 #bzip2
 include $(CLEAR_VARS) 
-LOCAL_ARM_MODE := arm 
 bzlib_files := \
 	bzip2/blocksort.c \
 	bzip2/huffman.c \
